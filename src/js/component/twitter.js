@@ -4,7 +4,7 @@ import "../../styles/twitter.scss";
 export default function Twitter() {
 	return (
 		<Fragment>
-			<div className="container border preview">
+			<div className="container border preview-twitter">
 				<div className="row py-3 px-3 d-flex justify-content-between align-items-center">
 					<div className="col d-flex align-items-center">
 						<img
