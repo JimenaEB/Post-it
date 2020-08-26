@@ -1,42 +1,33 @@
-.preview {
+.preview-instagram{
     width: 30rem;
     height: auto;
     font-size: 0.9rem;
 }
 
-.calendar {
-    font-size: 0.5rem;
+.calendar-instagram {
     width: 10rem;
     height: auto;
 }
 
-.calendar h5{
-    font-size: 0.7rem;
-    margin: 0;
-}
-.calendar .profile {
-    width: 2rem;
-    height: 2rem;
-    margin-left: 2rem;
-}
-
-.calendar .username {
-    margin-left: -1rem;
-}
-
-.calendar h3 {
+.calendar-instagram .username-instagram {
     font-size: 0.8rem;
-}
-
-.calendar .left-bottom {
     margin-left: -1rem;
 }
 
-.calendar .bottom {
+.profile-instagram {
+    height: 2rem;
+    width: 2rem;
+    margin-left: -0.7rem;
+}
+
+.calendar-instagram .options-instagram {
     display: none;
 }
 
-.calendar .comment {
-    margin-right: 0.5rem;
-    margin-left:0.5rem;
+.calendar-instagram .icons-instagram{
+    padding: 0;
+}
+
+.calendar-instagram .icons-instagram h3{
+    font-size: 0.8rem;
 }
