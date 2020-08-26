@@ -7,6 +7,11 @@
     font-size: 1.2rem;
 }
 
+.preview-twitter .twitter-post {
+    height: 15rem;
+    width: 30rem;
+}
+
 .calendar-twitter {
     width: 10rem;
     height: 10rem;
@@ -18,38 +23,22 @@
 }
 
 .calendar-twitter .profile-twitter {
-    margin-left:-1rem;
-    width: 2rem;
     height: 2rem;
-}
-
-.calendar-twitter .container-twitter {
-    margin: 0;
+    width: 2rem;
 }
 
 .calendar-twitter .username-twitter {
-    font-size: 0.8rem;
-    margin-top: -1rem;
-    margin-left: 0.7rem;
-}
-
-.calendar-twitter .details-twitter {
-    display: none;
-}
-
-.calendar-twitter .arrow-twitter{
-    display: none;
-}
-
-.calendar-twitter .tweet {
-    font-size: 0.8rem;
-}
-
-.calendar-twitter .icons-twitter h4{
     font-size: 0.7rem;
 }
 
-.calendar-twitter .icons-twitter i{
-    padding: 0;
-    padding-left: 1rem;
+.calendar-twitter .imgContainer-twitter {
+    width: 1rem;
 }
+.calendar-twitter .tweet {
+    font-size: 0.7rem;
+}
+
+.calendar-twitter i {
+    font-size: 0.7rem;
+}
+
