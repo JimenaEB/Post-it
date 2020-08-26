@@ -6,7 +6,12 @@
 
 .calendar-instagram {
     width: 10rem;
-    height: auto;
+    height: 15rem;
+    overflow: hidden;
+}
+
+.calendar-instagram:hover {
+    overflow-y: scroll;
 }
 
 .calendar-instagram .username-instagram {
