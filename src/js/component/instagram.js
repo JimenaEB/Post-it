@@ -5,7 +5,7 @@ import "../../styles/instagram.scss";
 export default function Instagram(props) {
 	return (
 		<Fragment>
-			<div className="container border preview-instagram">
+			<div className="container border calendar-instagram">
 				<div className="row d-flex align-items-center justify-content-between top">
 					<div className="col d-flex justify-content-start py-3 align-items-center ">
 						<img
