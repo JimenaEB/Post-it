@@ -1,0 +1,46 @@
+.preview {
+    width: 30rem;
+    height: auto;
+}
+
+.preview .tweet{
+    font-size: 1.2rem;
+}
+
+.calendar {
+    width: 10rem;
+    height: auto;
+}
+
+.calendar .profile {
+    
+    margin-left:-1rem;
+    margin-right: 1rem;
+    
+}
+
+.calendar .username {
+    font-size: 1rem;
+    margin-top: -1rem;
+}
+
+.calendar .details {
+    display: none;
+}
+
+.calendar .arrow{
+    display: none;
+}
+
+.calendar .tweet {
+    font-size: 0.8rem;
+}
+
+.calendar .icons h4{
+    font-size: 0.7rem;
+}
+
+.calendar .icons i{
+    padding: 0;
+    padding-left: 1rem;
+}
