@@ -67,7 +67,7 @@ export default function Instagram(props) {
 							<img
 								src={props.imgProfile}
 								alt="profile-pic"
-								className="rounded-circle mr-4 profile-instagram"
+								className="rounded-circle mr-2 profile-instagram"
 								width="40"
 								height="40"
 							/>
