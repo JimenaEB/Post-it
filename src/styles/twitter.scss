@@ -9,11 +9,15 @@
 
 .calendar-twitter {
     width: 10rem;
-    height: auto;
+    height: 10rem;
+    overflow: hidden;
+}
+
+.calendar-twitter:hover {
+    overflow-y: scroll;
 }
 
 .calendar-twitter .profile-twitter {
-    
     margin-left:-1rem;
     width: 2rem;
     height: 2rem;
