@@ -1,0 +1,41 @@
+.preview-facebook {
+    overflow-y: hidden;
+    width: 30rem;
+    height: 30rem;
+}
+
+.preview-facebook:hover {
+    overflow-y: scroll;
+}
+
+.username-facebook {
+    color: #4267B2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.preview-facebook .post-facebook{
+    width: 30rem;
+    height: 20rem;
+}
+
+.calendar-facebook {
+    overflow: hidden;
+    width: 10rem;
+    height: 15rem;
+}
+
+.calendar-facebook:hover {
+    overflow-y: scroll;
+}
+
+.calendar-facebook .profile-facebook {
+    height: 3rem;
+}
+
+.calendar-facebook .username-facebook {
+    font-size: 0.7rem;
+}
+
+.calendar-facebook h5 {
+    font-size: 0.7rem;
+}
