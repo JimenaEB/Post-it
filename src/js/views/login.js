@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/login.scss";
+import { Link } from "react-router-dom";
 import { InputIconBox } from "../component/inputiconbox";
 
 export const Login = props => (
@@ -26,9 +27,11 @@ export const Login = props => (
 		<button className="LoginButton">Sign in!</button>
 		<br />
 		<br />
-		<a href="#" className="linkRegister">
-			If you do not have an account, please register here
-		</a>
+		<Link to="/register">
+			<a href="#" className="linkRegister">
+				If you do not have an account, please register here
+			</a>
+		</Link>
 		<br />
 		<br />
 		<br />
