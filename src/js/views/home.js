@@ -5,6 +5,6 @@ import Post from "./post.js";
 
 export const Home = () => (
 	<div>
-		<Post />
+		<Facebook />
 	</div>
 );
