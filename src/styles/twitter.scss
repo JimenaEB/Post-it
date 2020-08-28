@@ -1,46 +1,44 @@
-.preview {
+.preview-twitter {
     width: 30rem;
     height: auto;
 }
 
-.preview .tweet{
+.preview-twitter .tweet{
     font-size: 1.2rem;
 }
 
-.calendar {
+.preview-twitter .twitter-post {
+    height: 15rem;
+    width: 30rem;
+}
+
+.calendar-twitter {
     width: 10rem;
-    height: auto;
+    height: 10rem;
+    overflow: hidden;
 }
 
-.calendar .profile {
-    
-    margin-left:-1rem;
-    margin-right: 1rem;
-    
+.calendar-twitter:hover {
+    overflow-y: scroll;
 }
 
-.calendar .username {
-    font-size: 1rem;
-    margin-top: -1rem;
+.calendar-twitter .profile-twitter {
+    height: 2rem;
+    width: 2rem;
 }
 
-.calendar .details {
-    display: none;
-}
-
-.calendar .arrow{
-    display: none;
-}
-
-.calendar .tweet {
-    font-size: 0.8rem;
-}
-
-.calendar .icons h4{
+.calendar-twitter .username-twitter {
     font-size: 0.7rem;
 }
 
-.calendar .icons i{
-    padding: 0;
-    padding-left: 1rem;
+.calendar-twitter .imgContainer-twitter {
+    width: 1rem;
 }
+.calendar-twitter .tweet {
+    font-size: 0.7rem;
+}
+
+.calendar-twitter i {
+    font-size: 0.7rem;
+}
+
