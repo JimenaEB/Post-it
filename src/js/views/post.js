@@ -3,6 +3,9 @@ import "../../styles/post.scss";
 import "fontsource-roboto";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
+import Instagram from "../component/instagram.js";
+import Twitter from "../component/twitter.js";
+import Facebook from "../component/facebook.js";
 
 const useStyles = makeStyles(theme => ({
 	textField: {
@@ -85,22 +88,28 @@ export default function Post() {
 							<label htmlFor="w3review" className="label-post">
 								<strong>Multimedia:</strong>
 							</label>
-							<div className="border rounded-lg px-3 py-2 d-flex align-items-center multimedia-container-post">
-								<img
-									className="multimedia-post rounded"
-									src="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-									alt="multimedia-post"
-								/>
-								<img
-									className="multimedia-post rounded mx-3"
-									src="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-									alt="multimedia-post"
-								/>
-								<img
-									className="multimedia-post rounded"
-									src="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-									alt="multimedia-post"
-								/>
+							<div className="border rounded-lg px-3 py-2 d-flex align-items-center multimedia-container-post ">
+								<div>
+									<img
+										className="multimedia-post rounded "
+										src="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+										alt="multimedia-post"
+									/>
+								</div>
+								<div>
+									<img
+										className="multimedia-post rounded mx-3 "
+										src="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+										alt="multimedia-post"
+									/>
+								</div>
+								<div>
+									<img
+										className="multimedia-post rounded"
+										src="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+										alt="multimedia-post"
+									/>
+								</div>
 								<i className="fas fa-plus-circle label-post icon-post ml-4" />
 							</div>
 						</div>
@@ -143,7 +152,15 @@ export default function Post() {
 						</div>
 					</div>
 				</form>
-				<div className="col container border-left" />
+				<div className="col container border-left">
+					<Facebook
+						name="Luigi"
+						description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+						imgProfile="https://images.pexels.com/photos/5021442/pexels-photo-5021442.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+						type="post"
+						imgPost="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+					/>
+				</div>
 			</div>
 		</div>
 	);

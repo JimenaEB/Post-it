@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import "../../styles/twitter.scss";
 
-
 export default function Twitter(props) {
 	if (props.type == "post") {
 		return (
@@ -19,7 +18,6 @@ export default function Twitter(props) {
 							/>
 							<h4 className="mr-3 username-twitter ">
 								<strong>{props.name}</strong>
-
 							</h4>
 							<h5 className="text-secondary details-twitter ">@{props.username} - 0 min</h5>
 						</div>
@@ -101,6 +99,6 @@ Twitter.propTypes = {
 	username: PropTypes.string,
 	tweet: PropTypes.string,
 	profile: PropTypes.object,
-	types: PropTypes.string,
+	type: PropTypes.string,
 	imgPost: PropTypes.string
 };

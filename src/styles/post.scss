@@ -32,20 +32,22 @@
     color: #8DB600;
 }
 
-.multimedia-post{
-    width: 20rem;
-    height: 20rem;
-    
-}
-
 .multimedia-container-post {
     overflow: hidden;
     width:25rem;
     height: 25rem;
 }
+
 .multimedia-container-post:hover {
     overflow-x: scroll;
 }
+
+.multimedia-post{
+    width: 20rem;
+    height: 20rem;   
+}
+
+
 
 .icon-post {
     font-size: 5rem;

@@ -98,6 +98,6 @@ Facebook.propTypes = {
 	imgProfile: PropTypes.string,
 	imgPost: PropTypes.string,
 	name: PropTypes.string,
-	post: PropTypes.string,
-	description: PropTypes.string
+	description: PropTypes.string,
+	type: PropTypes.string
 };
