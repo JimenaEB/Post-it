@@ -41,25 +41,32 @@ export default function Post() {
 							<div className="d-flex align-items-baseline">
 								<input type="radio" name="social" value="instagram" className="mr-3" />
 								<label htmlFor="male">
-									<i className="fab fa-instagram select-social-post instagram-post" />
+									<div className="InstagramLogo d-flex justify-content-center align-items-center text-center">
+										<i className=" fab fa-instagram" />
+									</div>
 								</label>
 							</div>
 							<div className="d-flex align-items-baseline">
 								<input type="radio" name="social" value="facebook" className="mr-3" />
 								<label htmlFor="female">
-									<i className="fab fa-facebook-square select-social-post facebook-post" />
+									<div className="FacebookLogo d-flex justify-content-center align-items-center text-center">
+										<i className=" fab fa-facebook-f" />
+									</div>
 								</label>
 							</div>
+
 							<div className="d-flex align-items-baseline">
 								<input type="radio" name="social" value="twitter" className="mr-3" />
 								<label htmlFor="other">
-									<i className="fab fa-twitter-square select-social-post twitter-post" />
+									<i className="TwitterLogo fab fa-twitter" />
 								</label>
 							</div>
 							<div className="d-flex align-items-baseline">
 								<input type="radio" name="social" value="linkedin" className="mr-3" />
 								<label htmlFor="other">
-									<i className="fab fa-linkedin select-social-post linkedin-post" />
+									<div className="LinkedinLogo d-flex justify-content-center align-items-center text-center">
+										<i className=" fab fa-linkedin-in" />
+									</div>
 								</label>
 							</div>
 						</div>
@@ -86,21 +93,27 @@ export default function Post() {
 								<strong>Multimedia:</strong>
 							</label>
 							<div className="border rounded-lg px-3 py-2 d-flex align-items-center multimedia-container-post">
-								<img
-									className="multimedia-post rounded"
-									src="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-									alt="multimedia-post"
-								/>
-								<img
-									className="multimedia-post rounded mx-3"
-									src="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-									alt="multimedia-post"
-								/>
-								<img
-									className="multimedia-post rounded"
-									src="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-									alt="multimedia-post"
-								/>
+								<div>
+									<img
+										className="multimedia-post rounded"
+										src="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+										alt="multimedia-post"
+									/>
+								</div>
+								<div>
+									<img
+										className="multimedia-post rounded mx-3"
+										src="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+										alt="multimedia-post"
+									/>
+								</div>
+								<div>
+									<img
+										className="multimedia-post rounded"
+										src="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+										alt="multimedia-post"
+									/>
+								</div>
 								<i className="fas fa-plus-circle label-post icon-post ml-4" />
 							</div>
 						</div>
