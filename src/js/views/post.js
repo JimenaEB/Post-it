@@ -3,6 +3,7 @@ import "../../styles/post.scss";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Twitter from "../component/twitter.js";
+import Instagram from "../component/instagram.js";
 
 const useStyles = makeStyles(theme => ({
 	textField: {
@@ -157,12 +158,11 @@ export default function Post() {
 					</div>
 				</form>
 				<div className="col container border-left">
-					<Twitter
+					<Instagram
 						name="Luigi"
-						username="Luigi845"
-						tweet="Fuck"
+						description="Fuck"
 						type="post"
-						profile="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+						imgProfile="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 						imgPost="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 					/>
 				</div>
