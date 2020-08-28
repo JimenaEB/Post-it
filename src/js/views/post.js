@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Twitter from "../component/twitter.js";
 import Instagram from "../component/instagram.js";
+import Facebook from "../component/facebook.js";
 
 const useStyles = makeStyles(theme => ({
 	textField: {
@@ -158,11 +159,12 @@ export default function Post() {
 					</div>
 				</form>
 				<div className="col container border-left">
-					<Instagram
+					<Twitter
 						name="Luigi"
-						description="Fuck"
+						username="Luigi84"
+						tweet="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed enim congue, lobortis erat ut, mollis urna. Praesent non lectus enim. Mauris massa est, vestibulum nec fringilla in, scelerisque ut nisi. Nunc sed nunc a nunc tempus ullamcorper. Nunc nec aliquam est. Donec nulla ipsum, varius sit amet scelerisque non, viverra id sapien. Ut elementum quam sit amet ante tincidunt, pellentesque condimentum risus blandit. Ut sed elit malesuada, egestas neque vel, efficitur tellus."
 						type="post"
-						imgProfile="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+						profile="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 						imgPost="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 					/>
 				</div>
