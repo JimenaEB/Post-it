@@ -3,7 +3,6 @@ import "../../styles/post.scss";
 import "fontsource-roboto";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
-import Instagram from "../component/instagram.js";
 
 const useStyles = makeStyles(theme => ({
 	textField: {
@@ -12,8 +11,8 @@ const useStyles = makeStyles(theme => ({
 }));
 export default function Post() {
 	const classes = useStyles();
-	// const [selectedDate, setSelectedDate] = React.useState(new Date());
-	// const [selectedTime, setSelectedTime] = React.useState(new Date().getHours());
+	const [selectedDate, setSelectedDate] = React.useState(new Date());
+	const [selectedTime, setSelectedTime] = React.useState(new Date().getHours());
 	// const [text, setText] = React.useState("");
 	// const changeDate = () => {
 	// 	let newDate = document.querySelector("#date").value;
@@ -77,7 +76,7 @@ export default function Post() {
 								className="rounded"
 								defaultValue=""
 								id="text"
-								onChange={changeText}
+								// onChange={changeText}
 							/>
 							<label htmlFor="w3review" className="label-post">
 								<strong>Tags:</strong>
@@ -86,7 +85,17 @@ export default function Post() {
 							<label htmlFor="w3review" className="label-post">
 								<strong>Multimedia:</strong>
 							</label>
-							<div className="border rounded-lg px-3 py-2 d-flex align-items-center">
+							<div className="border rounded-lg px-3 py-2 d-flex align-items-center multimedia-container-post">
+								<img
+									className="multimedia-post rounded"
+									src="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+									alt="multimedia-post"
+								/>
+								<img
+									className="multimedia-post rounded mx-3"
+									src="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+									alt="multimedia-post"
+								/>
 								<img
 									className="multimedia-post rounded"
 									src="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -110,7 +119,7 @@ export default function Post() {
 								InputLabelProps={{
 									shrink: true
 								}}
-								onChange={changeDate}
+								// onChange={changeDate}
 							/>
 						</div>
 						<div className="col d-flex flex-column py-3">
@@ -129,7 +138,7 @@ export default function Post() {
 								inputProps={{
 									step: 300 // 5 min
 								}}
-								onChange={changeTime}
+								// onChange={changeTime}
 							/>
 						</div>
 					</div>
