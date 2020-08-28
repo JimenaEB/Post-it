@@ -1,6 +1,11 @@
 .preview-twitter {
     width: 30rem;
     height: auto;
+    overflow: hidden;
+}
+
+.preview-twitter:hover {
+    overflow-y: scroll;
 }
 
 .preview-twitter .tweet{
