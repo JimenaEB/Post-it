@@ -15,28 +15,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
+			getUsers: async (newEmail, newPassword) => {
+				let user = {
+					email: newEmail,
+					password: newPassword
+				};
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
+				let response = await fetch(
+					"https://3000-adb46d90-6bf9-47e5-95ad-73fccc9586fc.ws-eu01.gitpod.io/login",
+					{
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json;charset=utf-8"
+						},
+						body: JSON.stringify(user)
+					}
+				);
 
-				//reset the global store
-				setStore({ demo: demo });
+				let result = await response.json();
+
 			}
 		}
 	};
