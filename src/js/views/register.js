@@ -1,14 +1,35 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../../styles/register.scss";
 import { Link } from "react-router-dom";
 import { InputIconBox } from "../component/inputiconbox";
+import { Context } from "../store/appContext";
 
 export const Register = () => {
+	const { actions } = useContext(Context);
+
+	const handleRegister = () => {
+		let username = document.querySelector("#Username").value;
+		let email = document.querySelector("#Email").value;
+		let password = document.querySelector("#Password").value;
+		let checkbox = document.querySelector("#TermsConditionsPrivacy").checked;
+
+		if (username != "" && email != "" && password != "" && checkbox != false) {
+			actions.createUser();
+		}
+	};
+
 	return (
 		<div className="text-center mt-5">
 			<h2 className="NewUserTitle">New User</h2>
 			<br />
 			<form>
+				<div className="PasswordInput flex-container">
+					<span>
+						<InputIconBox to="/inputiconbox" iconBox="fas fa-comment" />
+					</span>
+					<input className="InputP ml-1" type="text" id="Name" name="name" placeholder="Name" />
+				</div>
+				<br />
 				<div className="UsernameInput flex-container">
 					<span>
 						<InputIconBox to="/inputiconbox" iconBox="fas fa-user-alt" />
@@ -30,6 +51,7 @@ export const Register = () => {
 					<input className="InputP ml-1" type="text" id="Password" name="Password" placeholder="Password" />
 				</div>
 				<br />
+
 				<div className="TermsConditionsPrivacy">
 					<input
 						type="checkbox"
@@ -40,7 +62,9 @@ export const Register = () => {
 					<label> Accept the terms, conditions and Privacy Policy </label>
 				</div>
 			</form>
-			<button className="RegisterButton">Register!</button>
+			<button className="RegisterButton" onClick={() => handleRegister()}>
+				Register!
+			</button>
 			<br />
 			<br />
 			<br />
