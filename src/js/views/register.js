@@ -11,10 +11,11 @@ export const Register = () => {
 		let username = document.querySelector("#Username").value;
 		let email = document.querySelector("#Email").value;
 		let password = document.querySelector("#Password").value;
+		let name = document.querySelector("#Name").value;
 		let checkbox = document.querySelector("#TermsConditionsPrivacy").checked;
 
-		if (username != "" && email != "" && password != "" && checkbox != false) {
-			actions.createUser();
+		if (username != "" && email != "" && password != "" && checkbox != false && name != "") {
+			actions.createUser(username, email, password, name);
 		}
 	};
 
