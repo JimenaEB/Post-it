@@ -22,21 +22,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 					username: newUsername,
 					name: newName
 				};
-
+				console.log(user);
 				let response = await fetch(
 					"https://3000-adb46d90-6bf9-47e5-95ad-73fccc9586fc.ws-eu01.gitpod.io/users",
 					{
 						method: "POST",
 						headers: {
-							"Content-Type": "application/json;charset=utf-8"
+							"Content-Type": "application/json"
 						},
 						body: JSON.stringify(user)
 					}
 				);
 
 				let result = await response.json();
-				console.log(result);
-				console.log(result.message);
 			}
 		}
 	};
