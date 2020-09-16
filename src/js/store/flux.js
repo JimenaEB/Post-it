@@ -24,7 +24,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 				console.log(user);
 				let response = await fetch(
-					"https://3000-adb46d90-6bf9-47e5-95ad-73fccc9586fc.ws-eu01.gitpod.io/users",
+					"https://3000-ba72c270-9a3a-457d-a531-5aa780bd058d.ws-eu01.gitpod.io/users",
 					{
 						method: "POST",
 						headers: {
@@ -33,7 +33,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 						body: JSON.stringify(user)
 					}
 				);
-
 				let result = await response.json();
 			}
 		}

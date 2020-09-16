@@ -24,40 +24,66 @@ export const Register = () => {
 			<h2 className="NewUserTitle">New User</h2>
 			<br />
 			<form className="container-form container">
-				<div className="PasswordInput flex-container  ">
-					<span className="">
-						<InputIconBox to="/inputiconbox" iconBox="fas fa-comment" />
-					</span>
-					<label className="mx-3 col-1 mr-5">Name:</label>
-					<input className="InputP ml-1" type="text" id="Name" name="name" placeholder="Name" />
+				<div className="NameInput flex-container  ">
+					<div className="row">
+						<label className="col-1 mb-0 offset-3">Name:</label>
+					</div>
+					<div className="row d-flex justify-content-center">
+						<span>
+							<InputIconBox to="/inputiconbox" iconBox="fas fa-user-alt" />
+						</span>
+						<input className="InputP ml-1" type="text" id="Name" name="name" placeholder="Name" />
+					</div>
 				</div>
-
 				<br />
 				<div className="UsernameInput flex-container">
-					<span>
-						<InputIconBox to="/inputiconbox" iconBox="fas fa-user-alt" />
-					</span>
-					<label className="mx-3 col-1 mr-5">Username:</label>
-					<input className="InputU ml-1 " type="text" id="Username" name="Username" placeholder="Username" />
+					<div className="row">
+						<label className="col-1 mb-0 offset-3">Username:</label>
+					</div>
+					<div className="row d-flex justify-content-center">
+						<span>
+							<InputIconBox to="/inputiconbox" iconBox="fas fa-comment" />
+						</span>
+						<input
+							className="InputP ml-1"
+							type="text"
+							id="Username"
+							name="Username"
+							placeholder="Username"
+						/>
+					</div>
 				</div>
 				<br />
 				<div className="EmailInput flex-container ">
-					<span>
-						<InputIconBox to="/inputiconbox" iconBox="far fa-envelope " />
-					</span>
-					<label className="mx-3 col-1 mr-5">Email:</label>
-					<input className="InputE ml-1" type="text" id="Email" name="Email" placeholder="Email" />
+					<div className="row">
+						<label className="col-1 mb-0 offset-3">Email:</label>
+					</div>
+					<div className="row d-flex justify-content-center">
+						<span>
+							<InputIconBox to="/inputiconbox" iconBox="far fa-envelope " />
+						</span>
+						<input className="InputE ml-1" type="text" id="Email" name="Email" placeholder="Email" />
+					</div>
 				</div>
 				<br />
 				<div className="PasswordInput flex-container ">
-					<span>
-						<InputIconBox to="/inputiconbox" iconBox="fas fa-unlock" />
-					</span>
-					<label className="mx-3 col-1 mr-5">Password:</label>
-					<input className="InputP ml-1 " type="text" id="Password" name="Password" placeholder="Password" />
+					<div className="row">
+						<label className="col-1 mb-0 offset-3">Password:</label>
+					</div>
+					<div className="row d-flex justify-content-center">
+						<span>
+							<InputIconBox to="/inputiconbox" iconBox="fas fa-unlock" />
+						</span>
+						<input
+							className="InputP ml-1 "
+							type="text"
+							id="Password"
+							name="Password"
+							placeholder="Password"
+						/>
+					</div>
 				</div>
 				<br />
-
 				<div className="TermsConditionsPrivacy">
 					<input
 						type="checkbox"

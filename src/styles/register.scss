@@ -1,16 +1,17 @@
 .NewUserTitle{
     background-color: #8db600;
     color: white;
-    width: 30rem;
+    width: 40rem;
     padding: 0.5rem;
     margin: auto;
     border-radius: 5px;
     font-weight: bold;
 }
 
-.EmailInput, .PasswordInput, .UsernameInput{
+.EmailInput, .PasswordInput, .NameInput, .UsernameInput{
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .InputE, .InputP, .InputU{
@@ -23,7 +24,7 @@
     border-radius: 5px;
     background-color: #1b2f33;
     color: white;
-    width: 30rem;
+    width: 40rem;
     padding: 0.5rem;
 }
 

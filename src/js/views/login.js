@@ -8,18 +8,29 @@ export const Login = props => (
 		<h2 className="LoginTitle">Log-in</h2>
 		<br />
 		<form>
-			<div className="EmailInput flex-container">
-				<span>
-					<InputIconBox to="/inputiconbox" iconBox="fas fa-unlock" />
-				</span>
-				<input className="InputE ml-1" type="text" id="Email" name="Email" placeholder="Email" />
+			<div className="EmailInput flex-container ">
+				<div className="row">
+					<label className="col-1 mb-0 offset-4">Email:</label>
+				</div>
+				<div className="row d-flex justify-content-center">
+					<span>
+						<InputIconBox to="/inputiconbox" iconBox="far fa-envelope " />
+					</span>
+					<input className="InputE ml-1" type="text" id="Email" name="Email" placeholder="Email" />
+				</div>
 			</div>
+
 			<br />
-			<div className="PasswordInput flex-container">
-				<span>
-					<InputIconBox to="/inputiconbox" iconBox="far fa-envelope" />
-				</span>
-				<input className="InputP ml-1" type="text" id="Password" name="Password" placeholder="Password" />
+			<div className="PasswordInput flex-container ">
+				<div className="row">
+					<label className="col-1 mb-0 offset-4">Password:</label>
+				</div>
+				<div className="row d-flex justify-content-center">
+					<span>
+						<InputIconBox to="/inputiconbox" iconBox="fas fa-unlock" />
+					</span>
+					<input className="InputP ml-1 " type="text" id="Password" name="Password" placeholder="Password" />
+				</div>
 			</div>
 		</form>
 		<br />
