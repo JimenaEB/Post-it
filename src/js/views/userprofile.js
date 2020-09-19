@@ -9,7 +9,7 @@ export default function UserProfile() {
 					<strong>User Profile</strong>
 				</h1>
 			</div>
-			<div className="row">
+			<div className="row mb-4">
 				<form className="col container">
 					<div className="col row d-flex justify-content-center p-0">
 						<label htmlFor="w3review" className="label-perfil">
@@ -23,40 +23,75 @@ export default function UserProfile() {
 							/>
 						</div>
 						<div className="d-flex justify-content-center mt-3 mb-3 ml-5">
-							<i className="editPhoto fas fa-user-edit label-perfil icon-add ml-4" />
-							<i className="fas fa-plus-circle label-perfil icon-add ml-4" />
+							<i className="fas fa-plus-circle label-perfil icon-add ml-5" />
 							<i className="fas fa-minus-circle label-perfil icon-delete ml-4" />
 						</div>
 					</div>
-					<div className="row">
-						<div className="col d-flex flex-column">
-							<div className="d-flex flex-column mt-4">
-								<label htmlFor="w3review" className="label-perfil">
-									<strong>Name:</strong>
-								</label>
-								<textarea
-									name="w3review"
-									rows="2"
-									cols="50"
-									className="rounded"
-									defaultValue=""
-									id="name"
-								/>
-							</div>
-							<div className="d-flex flex-column mt-4 mb-5">
-								<label htmlFor="w3review" className="label-perfil">
-									<strong>Username:</strong>
-								</label>
-								<textarea name="w3review" rows="2" cols="50" className="rounded" defaultValue="" />
-							</div>
-						</div>
+
+					<div className="row mt-4">
+						<label htmlFor="w3review" className="col-5 label-perfil ml-0 align-items-start">
+							<i className="fas fa-edit" />
+							<strong> Name:</strong>
+						</label>
+						<input className="col-10 InputE ml-5 p-2" type="text" id="Name" name="Name" />
+					</div>
+
+					<div className="row mt-4">
+						<label htmlFor="w3review" className="col-5 label-perfil">
+							<i className="fas fa-edit" />
+							<strong> Username:</strong>
+						</label>
+						<input className="col-10 ml-5 p-2" type="text" id="Username" name="Username" />
 					</div>
 				</form>
 				<div className="col container border-left">
-					<span className="label-perfil">
-						<strong>Add new social networks:</strong>
+					<div>
+						<form className="flex-container d-flex flex-column">
+							<label htmlFor="w3review" className="label-perfil ml-0 align-items-start">
+								<strong>Select the social network to register:</strong>
+							</label>
+							<select className="selectSocialNetwork" name="socialNetwork">
+								<option value="instagram">Instagram</option>
+								<option value="twitter">Twitter</option>
+								<option value="facebook">Facebook</option>
+								<option value="likedin">Likedin</option>
+							</select>
+						</form>
+					</div>
+					<form className="flex-container d-flex flex-column">
+						<div className="row mt-4">
+							<label htmlFor="w3review" className="col-5 label-perfil ml-0 align-items-start">
+								<strong>Social network email:</strong>
+							</label>
+							<input
+								className="col-10 InputE ml-5 p-2"
+								type="text"
+								id="Email"
+								name="Email"
+								placeholder="Enter your email"
+							/>
+						</div>
+
+						<div className="row mt-4">
+							<label htmlFor="w3review" className="col-5 label-perfil">
+								<strong>Social network password:</strong>
+							</label>
+							<input
+								className="col-10 ml-5 p-2"
+								type="text"
+								id="Password"
+								name="Password"
+								placeholder="Enter your password"
+							/>
+						</div>
+					</form>
+					<div className="d-flex justify-content-center mt-3 mb-5">
+						<i className="fas fa-plus-circle label-perfil icon-add" />
+					</div>
+					<span className="label-perfil mt-5">
+						<strong>Registered social networks:</strong>
 					</span>
-					<div className="col d-flex justify-content-around align-items-baseline py-3">
+					<div className="col d-flex justify-content-around align-items-baseline py-3 mt-2">
 						<div className="d-flex align-items-baseline">
 							<input type="radio" name="social" value="instagram" className="mr-3" />
 							<label htmlFor="male">
@@ -73,7 +108,6 @@ export default function UserProfile() {
 								</div>
 							</label>
 						</div>
-
 						<div className="d-flex align-items-baseline">
 							<input type="radio" name="social" value="twitter" className="mr-3" />
 							<label htmlFor="other">
@@ -89,11 +123,13 @@ export default function UserProfile() {
 							</label>
 						</div>
 					</div>
-					<div className="d-flex justify-content-center mt-5 mb-3">
-						<i className="fas fa-plus-circle label-perfil icon-add ml-4" />
-						<i className="fas fa-minus-circle label-perfil icon-delete ml-4" />
+					<div className="d-flex justify-content-center mt-3">
+						<i className="fas fa-minus-circle label-perfil icon-delete" />
 					</div>
 				</div>
+			</div>
+			<div className="d-flex justify-content-center">
+				<button className="Save-Button mt-5 mb-5">Save changes!</button>
 			</div>
 		</div>
 	);

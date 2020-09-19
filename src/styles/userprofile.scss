@@ -24,14 +24,14 @@
     margin: auto;
 }
 
-.editPhoto{
+.editUser{
     color:#8DB600;
-    font-size: 3rem;
+    font-size: 1rem;
 }
 
 .user-photo-container{
     overflow: hidden;
-    width:20rem;
+    width: 20rem;
     height: 20rem;
 }
 
@@ -39,6 +39,21 @@
     font-size: 3.7rem;
 }
 
-.icon-add:hover{
+.icon-add:hover, .icon-delete:hover{
     cursor: pointer;
+}
+
+.selectSocialNetwork{
+    width: 29.7rem;
+    margin-left: 2.05rem;
+    padding: 0.73rem;
+}
+
+.Save-Button{
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #1b2f33;
+    color: white;
+    width: 30rem;
+    padding: 0.5rem;
 }
