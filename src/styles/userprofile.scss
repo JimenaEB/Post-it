@@ -1,0 +1,44 @@
+.perfil-header {
+    background-color: #8DB600;
+    font-family: Helvetica, sans-serif
+}
+
+.InstagramLogo, .TwitterLogo, .LinkedinLogo, .FacebookLogo{
+    color: white;
+    background: #1b2f33;
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: 40px;
+    width: 4rem;
+    margin: 1rem;
+    }
+
+.label-perfil {
+    color: #8DB600;
+}
+
+.user-photo{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 40rem;
+    margin: auto;
+}
+
+.editPhoto{
+    color:#8DB600;
+    font-size: 3rem;
+}
+
+.user-photo-container{
+    overflow: hidden;
+    width:20rem;
+    height: 20rem;
+}
+
+.icon-add, .icon-delete {
+    font-size: 3.7rem;
+}
+
+.icon-add:hover{
+    cursor: pointer;
+}
