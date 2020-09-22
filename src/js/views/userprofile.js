@@ -2,22 +2,12 @@ import React, { useState, useContext } from "react";
 import "../../styles/userprofile.scss";
 import { Context } from "../store/appContext";
 
-function toggleSocialNetwork(element, list) {
-	let index = list.indexOf(element);
-
-	if (index === -1) {
-		list.push(element);
-	} else {
-		list.splice(index, 1);
-	}
-	return list;
-}
-
 export default function UserProfile() {
 	const { store, actions } = useContext(Context);
 
-	const [profilePhoto, setProfilePhoto] = React.useState("");
-	const [logos, setLogos] = React.useState([]);
+	const [profilePhoto, setProfilePhoto] = useState("");
+	const [logos, setLogos] = useState({ twitter: false, instagram: false, facebook: false, linkedin: false });
+	const [activeSocial, setActiveSocial] = useState("");
 
 	const onChangePhoto = event => {
 		let url = event.target.value;
@@ -25,11 +15,15 @@ export default function UserProfile() {
 		actions.addPhoto(url);
 	};
 
-	const onChangeLogos = event => {
-		let logo = event.target.value;
-		setLogos(logo);
-		acctions.displayLogo(logo);
-		console.log(onChangeLogos);
+	const logoView = () => {
+		let obj = {};
+		obj[activeSocial] = true;
+		for (let social in logos) {
+			if (activeSocial != social) {
+				obj[social] = logos[social];
+			}
+		}
+		setLogos(obj);
 	};
 
 	return (
@@ -92,26 +86,19 @@ export default function UserProfile() {
 							<label htmlFor="w3review" className="label-perfil ml-0 align-items-start">
 								<strong>Select the social network to register:</strong>
 							</label>
-							<select className="selectSocialNetwork" name="socialNetwork">
+							<select
+								className="selectSocialNetwork"
+								name="socialNetwork"
+								onChange={e => {
+									setActiveSocial(e.target.value);
+								}}>
 								<option className="text-secondary" value="select">
 									Select...
 								</option>
-								<option
-									value="instagram"
-									onClick={() => setLogos(toggleSocialNetwork("instagram", Logos))}>
-									Instagram
-								</option>
-								<option value="twitter" onClick={() => setLogos(toggleSocialNetwork("twitter", Logos))}>
-									Twitter
-								</option>
-								<option
-									value="facebook"
-									onClick={() => setLogos(toggleSocialNetwork("facebook", Logos))}>
-									Facebook
-								</option>
-								<option value="likedin" onClick={() => setLogos(toggleSocialNetwork("likedin", Logos))}>
-									Likedin
-								</option>
+								<option value="instagram">Instagram</option>
+								<option value="twitter">Twitter</option>
+								<option value="facebook">Facebook</option>
+								<option value="linkedin">Linkedin</option>
 							</select>
 						</form>
 					</div>
@@ -146,7 +133,7 @@ export default function UserProfile() {
 						<button
 							className="PlusAndMinus"
 							onClick={() => {
-								onChangeLogos();
+								logoView();
 							}}>
 							<i className="fas fa-plus-circle label-perfil icon-add " />
 						</button>
@@ -155,15 +142,15 @@ export default function UserProfile() {
 						<strong>Registered social networks:</strong>
 					</span>
 					<div className="col d-flex justify-content-around align-items-baseline py-3 mt-2">
-						<div className="d-flex align-items-baseline">
-							<input type="radio" name="social" value="instagram" className="mr-3" />
+						<div className={logos["twitter"] == true ? "d-flex align-items-baseline" : "d-none"}>
+							<input type="radio" name="social" value="twitter" className="mr-3" />
 							<label htmlFor="male">
 								<div className="TwitterLogo d-flex justify-content-center align-items-center text-center">
 									<i className="fab fa-twitter" />
 								</div>
 							</label>
 						</div>
-						<div className="d-flex align-items-baseline">
+						<div className={logos["facebook"] == true ? "d-flex align-items-baseline" : "d-none"}>
 							<input type="radio" name="social" value="facebook" className="mr-3" />
 							<label htmlFor="female">
 								<div className="FacebookLogo d-flex justify-content-center align-items-center text-center">
@@ -171,15 +158,15 @@ export default function UserProfile() {
 								</div>
 							</label>
 						</div>
-						<div className="d-flex align-items-baseline">
-							<input type="radio" name="social" value="twitter" className="mr-3" />
+						<div className={logos["instagram"] == true ? "d-flex align-items-baseline" : "d-none"}>
+							<input type="radio" name="social" value="instagram" className="mr-3" />
 							<label htmlFor="other">
 								<div className="InstagramLogo d-flex justify-content-center align-items-center text-center">
 									<i className="fab fa-instagram" />
 								</div>
 							</label>
 						</div>
-						<div className="d-flex align-items-baseline">
+						<div className={logos["linkedin"] == true ? "d-flex align-items-baseline" : "d-none"}>
 							<input type="radio" name="social" value="linkedin" className="mr-3" />
 							<label htmlFor="other">
 								<div className="LinkedinLogo d-flex justify-content-center align-items-center text-center">
