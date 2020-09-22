@@ -18,8 +18,8 @@
 }
 
 .user-photo{
-    width: 20rem;
-    height: 20rem;
+    width: 13rem;
+    height: 13rem;
     border-radius: 40rem;
     margin: auto;
 }
@@ -31,8 +31,8 @@
 
 .user-photo-container{
     overflow: hidden;
-    width: 20rem;
-    height: 20rem;
+    width: 13rem;
+    height: 13rem;
 }
 
 .icon-add, .icon-delete {
@@ -41,6 +41,11 @@
 
 .icon-add:hover, .icon-delete:hover{
     cursor: pointer;
+}
+
+.PlusAndMinus{
+    border-color: #ffffff;
+    border-radius: 1rem;
 }
 
 .selectSocialNetwork{
