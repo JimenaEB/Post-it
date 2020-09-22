@@ -1,6 +1,8 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			imgs: "",
+
 			demo: [
 				{
 					title: "FIRST",
@@ -15,28 +17,70 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
+			addImg: url => {
+				setStore({ imgs: url });
 				const store = getStore();
+				console.log(store.imgs);
+			},
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
+			addSocial: async (newUsername, newPassword, newEmail, newSocialName, newPhoto) => {
+				let social = {
+					username: newUsername,
+					password: newPassword,
+					email: newEmail,
+					social_name: newSocialName,
+					photo: newPhoto
+				};
+				console.log(social);
+				let response = await fetch(
+					"https://3000-ba72c270-9a3a-457d-a531-5aa780bd058d.ws-eu01.gitpod.io/socials",
+					{
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json"
+						},
+						body: JSON.stringify(social)
+					}
+				);
+				let result = await response.json();
+			},
 
-				//reset the global store
-				setStore({ demo: demo });
+			createPost: async (newDate, newDescription) => {
+				let post = {
+					date: newDate,
+					description: newDescription
+				};
+				console.log(post);
+				let response = await fetch(
+					"https://3000-ba72c270-9a3a-457d-a531-5aa780bd058d.ws-eu01.gitpod.io/posts",
+					{
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json"
+						},
+						body: JSON.stringify(post)
+					}
+				);
+				let result = await response.json();
+			},
+
+			registerMultimedia: async (newMultimediaType, newMultimediaUrl) => {
+				let multimedia = {
+					multimedia_type: newMultimediaType,
+					multimedia_url: newMultimediaUrl
+				};
+				console.log(multimedia);
+				let response = await fetch(
+					"https://3000-ba72c270-9a3a-457d-a531-5aa780bd058d.ws-eu01.gitpod.io/multimedias",
+					{
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json"
+						},
+						body: JSON.stringify(multimedia)
+					}
+				);
+				let result = await response.json();
 			}
 		}
 	};
