@@ -1,0 +1,42 @@
+.preview-instagram{
+    width: 30rem;
+    height: auto;
+    font-size: 0.9rem;
+    overflow: hidden;
+}
+
+.preview-instagram:hover {
+    overflow-y: scroll;
+}
+
+.calendar-instagram {
+    width: 10rem;
+    height: 15rem;
+    overflow: hidden;
+}
+
+.calendar-instagram:hover {
+    overflow-y: scroll;
+}
+
+.calendar-instagram .username-instagram {
+    font-size: 0.8rem;
+    margin-right: 0.6rem;
+}
+
+.calendar-instagram .profile-instagram {
+    height: 2rem;
+    width: 2rem;
+}
+
+.calendar-instagram .options-instagram {
+    display: none;
+}
+
+.calendar-instagram .icons-instagram{
+    padding: 0;
+}
+
+.calendar-instagram .icons-instagram h3{
+    font-size: 0.8rem;
+}
