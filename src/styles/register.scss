@@ -1,4 +1,4 @@
-.LoginTitle{
+.NewUserTitle{
     background-color: #8db600;
     color: white;
     width: 30rem;
@@ -8,44 +8,45 @@
     font-weight: bold;
 }
 
-.EmailInput, .PasswordInput{
+.EmailInput, .PasswordInput, .NameInput, .UsernameInput{
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
-.emailLabel{
-    margin-left: 24rem;
+.nameLabel, .emailLabel{
+    margin-left: 19.3rem;
 }
 
-.passwordLabel{
-    margin-left: 25rem;
+.usernameLabel, .passwordLabel{
+    margin-left: 19.9rem;
 }
 
-.InputE, .InputP{
+.InputE, .InputP, .InputU{
     width: 27rem;
-    border-radius: 5px;
     border: 1px solid #a5a7a7;
+    border-radius: 5px;
 }
 
-.LoginButton{
+.RegisterButton{
     font-weight: bold;
     border-radius: 5px;
     background-color: #1b2f33;
     color: white;
-    width: 30rem;
+    width: 40rem;
     padding: 0.5rem;
-    margin: auto;
 }
 
-.linkRegister{
-    font-weight: bold;
-    border-radius: 5px;
-    background-color: white;
+.TermsConditionsPrivacy{
     color: #1b2f33;
-    border: 2px solid #1b2f33;
-    width: 30rem;
-    padding: 0.1rem;
-    margin: auto;
+    background-color: white;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+#TermsConditionsPrivacy{
+    margin-right: 1rem;
+    background-color: #1b2f33;
 }
 
 .GoogleLogo, .InstagramLogo, .TwitterLogo, .LinkedinLogo, .FacebookLogo{

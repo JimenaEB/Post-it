@@ -1,88 +1,77 @@
 import React, { useContext, useState } from "react";
 import "../../styles/login.scss";
+import { Link } from "react-router-dom";
 import { InputIconBox } from "../component/inputiconbox";
 import { Context } from "../store/appContext";
 
-export const Login = props => {
-	const { actions } = useContext(Context);
-	let [email, setEmail] = useState("");
-	let [password, setPassword] = useState("");
+export const Login = props => (
+	<div className="text-center mt-0">
+		<h2 className="LoginTitle">Log-in</h2>
 
-	const handleEmail = event => {
-		setEmail(event.target.value);
-	};
-
-	const handlePassword = event => {
-		setPassword(event.target.value);
-	};
-
-	const handleLogin = () => {
-		let newEmail = document.querySelector("#Email").value;
-		let newPassword = document.querySelector("#Password").value;
-
-		if (newEmail != "" && newPassword != "") {
-			actions.getUsers(newEmail, newPassword);
-		}
-	};
-
-	return (
-		<div className="text-center mt-5">
-			<h2 className="LoginTitle">Log-in</h2>
-			<br />
-			<form>
-				<div className="EmailInput flex-container">
-					<span>
-						<InputIconBox to="/inputiconbox" iconBox="fas fa-unlock" />
-					</span>
-					<input
-						className="InputE ml-1"
-						type="text"
-						id="Email"
-						name="Email"
-						placeholder="Email"
-						onChange={e => handleEmail(e)}
-					/>
+		<form>
+			<div className="EmailInput flex-container d-flex flex-column mt-4">
+				<div className="row">
+					<label className="emailLabel col-1 offset-3 mb-0">Email:</label>
 				</div>
-				<br />
-				<div className="PasswordInput flex-container">
+				<div className="row d-flex justify-content-center">
 					<span>
-						<InputIconBox to="/inputiconbox" iconBox="far fa-envelope" />
+						<InputIconBox to="/inputiconbox" iconBox="far fa-envelope " />
+					</span>
+					<input className="InputE ml-1" type="text" id="Email" name="Email" placeholder="Enter your email" onChange={e => handleEmail(e)}/>
+				</div>
+			</div>
+
+			<div className="PasswordInput flex-container d-flex flex-column mt-3">
+				<div className="row">
+					<label className="passwordLabel col-1 mb-0 offset-4">Password:</label>
+				</div>
+				<div className="row d-flex justify-content-center">
+					<span>
+						<InputIconBox to="/inputiconbox" iconBox="fas fa-lock" />
 					</span>
 					<input
 						className="InputP ml-1"
 						type="text"
 						id="Password"
 						name="Password"
-						placeholder="Password"
-						onChange={e => handlePassword(e)}
+						placeholder="Enter your password"
+            onChange={e => handlePassword(e)}
 					/>
-				</div>
-			</form>
-			<br />
 
-			<button className="LoginButton" onClick={() => handleLogin()}>
-				Sign in!
-			</button>
-			<br />
-			<br />
+				</div>
+			</div>
+		</form>
+		<div className="d-flex flex-column mt-3">
+			<button className="LoginButton mt-4" onClick={() => handleLogin()}>Sign in!</button>
+			<a href="#" className="linkRegister mt-3">
+				If you do not have an account, please register here
+			</a>
+		</div>
+		<div className="mt-4">
+
+		<br />
+
+		<button className="LoginButton">Sign in!</button>
+		<br />
+		<br />
+		<Link to="/register">
 			<a href="#" className="linkRegister">
 				If you do not have an account, please register here
 			</a>
-			<br />
-			<br />
-			<br />
-			<br />
+		</Link>
+		<br />
+		<br />
+		<br />
+		<br />
+		<div>
+
+			<span className="font-weight-bold">Sign in with:</span>
 			<div>
-				<span className="font-weight-bold">Sign in with:</span>
-				<br />
-				<div>
-					<i className="InstagramLogo fab fa-instagram" />
-					<i className="TwitterLogo fab fa-twitter" />
-					<i className="LinkedinLogo fab fa-linkedin-in" />
-					<i className="FacebookLogo fab fa-facebook-f" />
-					<br />
-					<br />
-				</div>
+				<i className="GoogleLogo fab fa-google" />
+				<i className="InstagramLogo fab fa-instagram" />
+				<i className="TwitterLogo fab fa-twitter" />
+				<i className="LinkedinLogo fab fa-linkedin-in" />
+				<i className="FacebookLogo fab fa-facebook-f" />
 			</div>
 		</div>
 	);
