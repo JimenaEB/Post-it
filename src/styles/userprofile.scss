@@ -1,0 +1,64 @@
+.perfil-header {
+    background-color: #8DB600;
+    font-family: Helvetica, sans-serif
+}
+
+.InstagramLogo, .TwitterLogo, .LinkedinLogo, .FacebookLogo{
+    color: white;
+    background: #1b2f33;
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: 40px;
+    width: 4rem;
+    margin: 1rem;
+    }
+
+.label-perfil {
+    color: #8DB600;
+}
+
+.user-photo{
+    width: 13rem;
+    height: 13rem;
+    border-radius: 40rem;
+    margin: auto;
+}
+
+.editUser{
+    color:#8DB600;
+    font-size: 1rem;
+}
+
+.user-photo-container{
+    overflow: hidden;
+    width: 13rem;
+    height: 13rem;
+}
+
+.icon-add, .icon-delete {
+    font-size: 3.7rem;
+}
+
+.icon-add:hover, .icon-delete:hover{
+    cursor: pointer;
+}
+
+.PlusAndMinus{
+    border-color: #ffffff;
+    border-radius: 1rem;
+}
+
+.selectSocialNetwork{
+    width: 29.7rem;
+    margin-left: 2.05rem;
+    padding: 0.73rem;
+}
+
+.Save-Button{
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #1b2f33;
+    color: white;
+    width: 30rem;
+    padding: 0.5rem;
+}
