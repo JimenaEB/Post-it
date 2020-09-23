@@ -15,6 +15,7 @@ export const Navbar = () => {
 			<div className="ml-auto">
 				<Profile />
 			</div>
+
 		</nav>
 	);
 };

@@ -2,7 +2,7 @@
     background-color: #8db600;
     color: white;
     width: 30rem;
-    padding: 0.5rem;
+    padding: 0.4rem;
     margin: auto;
     border-radius: 5px;
     font-weight: bold;
@@ -13,9 +13,18 @@
     justify-content: center;
 }
 
+.emailLabel{
+    margin-left: 24rem;
+}
+
+.passwordLabel{
+    margin-left: 25rem;
+}
+
 .InputE, .InputP{
     width: 27rem;
-    border: 1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    border: 1px solid #a5a7a7;
 }
 
 .LoginButton{
@@ -25,26 +34,27 @@
     color: white;
     width: 30rem;
     padding: 0.5rem;
+    margin: auto;
 }
 
 .linkRegister{
-    color: #1b2f33;
-    background-color: white;
-    border: 2px solid #1b2f33;
-    border-radius: 5px;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
     font-weight: bold;
-    padding-left: 2.7rem;
-    padding-right: 2.7rem;
+    border-radius: 5px;
+    background-color: white;
+    color: #1b2f33;
+    border: 2px solid #1b2f33;
+    width: 30rem;
+    padding: 0.1rem;
+    margin: auto;
 }
 
-.InstagramLogo, .TwitterLogo, .LinkedinLogo, .FacebookLogo{
-    color: #8db600;
+.GoogleLogo, .InstagramLogo, .TwitterLogo, .LinkedinLogo, .FacebookLogo{
+    color: #ffffff;
     background: #1b2f33;
-    padding: 1rem;
+    padding: 0.5rem;
     font-size: 2rem;
     border-radius: 40px;
-    width: 4rem;
+    width: 3rem;
+    height: 3rem;
     margin: 1rem;
     }
