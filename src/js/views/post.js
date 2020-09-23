@@ -14,17 +14,6 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-function toggleItem(element, list) {
-	let index = list.indexOf(element);
-
-	if (index === -1) {
-		list.push(element);
-	} else {
-		list.splice(index, 1);
-	}
-	return list;
-}
-
 export default function Post() {
 	const { store, actions } = useContext(Context);
 
@@ -32,9 +21,10 @@ export default function Post() {
 	const [selectedDate, setSelectedDate] = React.useState(new Date());
 	const [selectedTime, setSelectedTime] = React.useState(new Date().getHours());
 
-	const [listSocial, setListSocial] = React.useState([]);
-	const [text, setText] = React.useState("");
-	const [imgs, setImgs] = React.useState("");
+	const [text, setText] = useState("");
+	const [imgs, setImgs] = useState("");
+	const [listSocial, setListSocial] = useState([]);
+	//const [activeSocialComponent, setActiveSocialComponent] = useState("");
 
 	const onChangeText = event => {
 		let text = event.target.value;
@@ -53,25 +43,9 @@ export default function Post() {
 		}
 	};
 
-	// const string = "Hola que tal... #estoesuntag #estoesotrotag";
-	// const split = ["Hola", "que", "tal...", "#estoesuntag", "#estoesotrotag"];
-	// const tags = ["#estoesuntag", "#estoesotrotag"];
-
-	// const ejemplo = string.split(" ");
-	// const ejemplo2 = string;
-
-	// const [text, setText] = React.useState("");
-	// const changeDate = () => {
-	// 	let newDate = document.querySelector("#date").value;
-	// 	setSelectedDate(newDate);
-	// };
 	// const changeTime = () => {
 	// 	let newDate = document.querySelector("#time").value;
 	// 	setSelectedTime(newDate);
-	// };
-	// const changeText = () => {
-	// 	let newText = document.querySelector("#text").value;
-	// 	setText(newText);
 	// };
 
 	return (
@@ -89,14 +63,16 @@ export default function Post() {
 								<input
 									type="checkbox"
 									name="social"
-									id="Instagram"
-									value="instagram"
+									id="Twitter"
+									value="twitter"
 									className="mr-3"
-									onClick={() => setListSocial(toggleItem("instagram", listSocial))}
+									onChange={() => {
+										setListSocial(listSocial => [...listSocial, "twitter"]);
+									}}
 								/>
 								<label htmlFor="male">
-									<div className="InstagramLogo d-flex justify-content-center align-items-center text-center">
-										<i className=" fab fa-instagram" />
+									<div className="TwitterLogo d-flex justify-content-center align-items-center text-center">
+										<i className="fab fa-twitter" />
 									</div>
 								</label>
 							</div>
@@ -108,11 +84,13 @@ export default function Post() {
 									id="Facebook"
 									value="facebook"
 									className="mr-3"
-									onClick={() => setListSocial(toggleItem("facebook", listSocial))}
+									onChange={() => {
+										setListSocial(listSocial => [...listSocial, "facebook"]);
+									}}
 								/>
 								<label htmlFor="female">
-									<div className="FacebookLogo d-flex justify-content-center align-items-center text-center">
-										<i className=" fab fa-facebook-f" />
+									<div className="d-flex justify-content-center align-items-center text-center">
+										<i className="FacebookLogo fab fa-facebook-f" />
 									</div>
 								</label>
 							</div>
@@ -121,13 +99,15 @@ export default function Post() {
 								<input
 									type="checkbox"
 									name="social"
-									id="Twitter"
-									value="twitter"
+									id="Instagram"
+									value="instagram"
 									className="mr-3"
-									onClick={() => setListSocial(toggleItem("twitter", listSocial))}
+									onChange={() => {
+										setListSocial(listSocial => [...listSocial, "instagram"]);
+									}}
 								/>
 								<label htmlFor="other">
-									<i className="TwitterLogo fab fa-twitter" />
+									<i className="InstagramLogo fab fa-instagram" />
 								</label>
 							</div>
 
@@ -138,7 +118,9 @@ export default function Post() {
 									id="Linkedin"
 									value="linkedin"
 									className="mr-3"
-									onClick={() => setListSocial(toggleItem("linkedin", listSocial))}
+									onChange={() => {
+										setListSocial(listSocial => [...listSocial, "linkedin"]);
+									}}
 								/>
 								<label htmlFor="other">
 									<div className="LinkedinLogo d-flex justify-content-center align-items-center text-center">
