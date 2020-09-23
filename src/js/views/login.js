@@ -10,9 +10,6 @@ export default function Login() {
 
 			<form>
 				<div className="EmailInput flex-container d-flex flex-column mt-4">
-					<div className="row">
-						<label className="emailLabel col-1 offset-3 mb-0">Email:</label>
-					</div>
 					<div className="row d-flex justify-content-center">
 						<span>
 							<InputIconBox to="/inputiconbox" iconBox="far fa-envelope " />
