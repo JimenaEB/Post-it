@@ -23,8 +23,13 @@ export default function Post() {
 
 	const [text, setText] = useState("");
 	const [imgs, setImgs] = useState("");
-	const [listSocial, setListSocial] = useState([]);
-	//const [activeSocialComponent, setActiveSocialComponent] = useState("");
+	const [listSocial, setListSocial] = useState({
+		twitter: false,
+		instagram: false,
+		facebook: false,
+		linkedin: false
+	});
+	//const [SocialComponents, setSocialComponents] = useState("");
 
 	const onChangeText = event => {
 		let text = event.target.value;
@@ -37,16 +42,25 @@ export default function Post() {
 		actions.addImg(url);
 	};
 
+	const viewComponents = activeSocial => {
+		setListSocial(listSocial => {
+			if (activeSocial == "twitter") {
+				return { ...listSocial, twitter: !listSocial.twitter };
+			} else if (activeSocial == "facebook") {
+				return { ...listSocial, facebook: !listSocial.facebook };
+			} else if (activeSocial == "instagram") {
+				return { ...listSocial, instagram: !listSocial.instagram };
+			} else if (activeSocial == "linkedin") {
+				return { ...listSocial, linkedin: !listSocial.linkedin };
+			}
+		});
+	};
+
 	const onSubmit = () => {
 		if ((listSocial != [] && selectedDate != [] && selectedTime != [] && text != "") || imgs != "") {
 			actions.createPost(text, listSocial, imgs, selectedDate, selectedTime);
 		}
 	};
-
-	// const changeTime = () => {
-	// 	let newDate = document.querySelector("#time").value;
-	// 	setSelectedTime(newDate);
-	// };
 
 	return (
 		<div className="container">
@@ -66,8 +80,8 @@ export default function Post() {
 									id="Twitter"
 									value="twitter"
 									className="mr-3"
-									onChange={() => {
-										setListSocial(listSocial => [...listSocial, "twitter"]);
+									onClick={e => {
+										viewComponents(e.target.value);
 									}}
 								/>
 								<label htmlFor="male">
@@ -84,8 +98,8 @@ export default function Post() {
 									id="Facebook"
 									value="facebook"
 									className="mr-3"
-									onChange={() => {
-										setListSocial(listSocial => [...listSocial, "facebook"]);
+									onClick={e => {
+										viewComponents(e.target.value);
 									}}
 								/>
 								<label htmlFor="female">
@@ -102,8 +116,8 @@ export default function Post() {
 									id="Instagram"
 									value="instagram"
 									className="mr-3"
-									onChange={() => {
-										setListSocial(listSocial => [...listSocial, "instagram"]);
+									onClick={e => {
+										viewComponents(e.target.value);
 									}}
 								/>
 								<label htmlFor="other">
@@ -118,8 +132,8 @@ export default function Post() {
 									id="Linkedin"
 									value="linkedin"
 									className="mr-3"
-									onChange={() => {
-										setListSocial(listSocial => [...listSocial, "linkedin"]);
+									onClick={e => {
+										viewComponents(e.target.value);
 									}}
 								/>
 								<label htmlFor="other">
@@ -198,26 +212,42 @@ export default function Post() {
 						</div>
 					</div>
 				</form>
-				<div className="col container border-left">
-					<Twitter
-						name="Luigi"
-						username="Luigi84"
-						tweet={text}
-						type="post"
-						profile="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-						imgPost={imgs}
-					/>
+				<div>
+					<div className={listSocial["twitter"] == true ? "col container border-left" : "d-none"}>
+						<Twitter
+							name="Luigi"
+							username="Luigi84"
+							tweet={text}
+							type="post"
+							profile="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+							imgPost={imgs}
+						/>
+					</div>
+					<div className={listSocial["facebook"] == true ? "col container border-left" : "d-none"}>
+						<Facebook
+							imgProfile="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+							imgPost={imgs}
+							name="Luigi"
+							description={text}
+							type="post"
+						/>
+					</div>
+					<div className={listSocial["instagram"] == true ? "col container border-left" : "d-none"}>
+						<Instagram
+							name="Luigi"
+							imgProfile="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+							imgPost={imgs}
+							description={text}
+							type="post"
+						/>
+					</div>
 				</div>
 			</div>
-			<br />
-			<div className="d-flex justify-content-center">
+			<div className="d-flex justify-content-center mt-5 mb-5">
 				<button className="PostItButton mt-5 mb-5" onClick={onSubmit}>
 					Post It!
 				</button>
 			</div>
-			<br />
-			<br />
-			<br />
 		</div>
 	);
 }
