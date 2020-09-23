@@ -3,8 +3,4 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 import Post from "./post.js";
 
-export const Home = () => (
-	<div>
-		<Post />
-	</div>
-);
+export const Home = () => <Post />;
