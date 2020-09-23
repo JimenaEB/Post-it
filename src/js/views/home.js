@@ -1,6 +1,6 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
-import "../../styles/home.scss";
-import Post from "./post.js";
+import Login from "./login.js";
+import Twitter from "../component/twitter.js";
 
-export const Home = () => <Post />;
+export const Home = () => <Login />;
