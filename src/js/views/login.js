@@ -25,9 +25,6 @@ export default function Login() {
 				</div>
 
 				<div className="PasswordInput flex-container d-flex flex-column mt-3">
-					<div className="row">
-						<label className="passwordLabel col-1 mb-0 offset-4">Password:</label>
-					</div>
 					<div className="row d-flex justify-content-center">
 						<span>
 							<InputIconBox to="/inputiconbox" iconBox="fas fa-lock" />
