@@ -32,12 +32,6 @@ export default function Calendar() {
 						<div className="rounded-lg bg-dark container text-center text-white py-2 mb-3">
 							<h3>Lunes</h3>
 						</div>
-						<div className="my-4">
-							<Postit />
-						</div>
-						<div className="my-4">
-							<Postit />
-						</div>
 					</div>
 					<div className="col mx-2 column-calendar bg-light py-2">
 						<div className="rounded-lg bg-dark container text-center text-white py-2">
@@ -47,9 +41,6 @@ export default function Calendar() {
 					<div className="col mx-2 column-calendar bg-light py-2">
 						<div className="rounded-lg bg-dark container text-center text-white py-2">
 							<h3>Mièrcoles</h3>
-						</div>
-						<div className="my-4">
-							<Postit />
 						</div>
 					</div>
 					<div className="col mx-2 column-calendar bg-light py-2">
