@@ -6,7 +6,6 @@ import Twitter from "../component/twitter.js";
 import Instagram from "../component/instagram.js";
 import Facebook from "../component/facebook.js";
 import { Context } from "../store/appContext";
-import { string } from "prop-types";
 
 const useStyles = makeStyles(theme => ({
 	textField: {
@@ -14,7 +13,7 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-export default function Post() {
+export function Post() {
 	const { store, actions } = useContext(Context);
 
 	const classes = useStyles();

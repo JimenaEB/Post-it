@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import "../../styles/userprofile.scss";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 export default function UserProfile() {
 	const { store, actions } = useContext(Context);
@@ -202,7 +203,9 @@ export default function UserProfile() {
 				</div>
 			</div>
 			<div className="d-flex justify-content-center">
-				<button className="Save-Button mt-5 mb-5">Save changes!</button>
+				<Link to="/post">
+					<button className="Save-Button mt-5 mb-5">Save changes!</button>
+				</Link>
 			</div>
 		</div>
 	);

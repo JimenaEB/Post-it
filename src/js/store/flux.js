@@ -3,21 +3,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			profilePhoto: "",
 			logos: [],
-			imgs: "",
-
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			imgs: ""
 		},
+
 		actions: {
 			addPhoto: url => {
 				setStore({ profilePhoto: url });
