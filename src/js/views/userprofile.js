@@ -15,9 +15,20 @@ export default function UserProfile() {
 		actions.addPhoto(url);
 	};
 
-	const logoView = () => {
+	const viewLogo = () => {
 		let obj = {};
 		obj[activeSocial] = true;
+		for (let social in logos) {
+			if (activeSocial != social) {
+				obj[social] = logos[social];
+			}
+		}
+		setLogos(obj);
+	};
+
+	const removeLogo = () => {
+		let obj = {};
+		obj[activeSocial] = false;
 		for (let social in logos) {
 			if (activeSocial != social) {
 				obj[social] = logos[social];
@@ -133,7 +144,7 @@ export default function UserProfile() {
 						<button
 							className="PlusAndMinus"
 							onClick={() => {
-								logoView();
+								viewLogo();
 							}}>
 							<i className="fas fa-plus-circle label-perfil icon-add " />
 						</button>
@@ -141,7 +152,11 @@ export default function UserProfile() {
 					<span className="label-perfil mt-5">
 						<strong>Registered social networks:</strong>
 					</span>
-					<div className="col d-flex justify-content-around align-items-baseline py-3 mt-2">
+					<div
+						className="col d-flex justify-content-around align-items-baseline py-3 mt-2"
+						onChange={e => {
+							setActiveSocial(e.target.value);
+						}}>
 						<div className={logos["twitter"] == true ? "d-flex align-items-baseline" : "d-none"}>
 							<input type="radio" name="social" value="twitter" className="mr-3" />
 							<label htmlFor="male">
@@ -175,7 +190,11 @@ export default function UserProfile() {
 							</label>
 						</div>
 					</div>
-					<div className="d-flex justify-content-center mt-3">
+					<div
+						className="d-flex justify-content-center mt-3"
+						onClick={() => {
+							removeLogo();
+						}}>
 						<button className="PlusAndMinus">
 							<i className="fas fa-minus-circle label-perfil icon-delete" />
 						</button>
