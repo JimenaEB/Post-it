@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Profile from "./profile.js";
 import { Logo } from "../component/logo";
+
 
 export const Navbar = () => {
 	return (
@@ -10,6 +12,10 @@ export const Navbar = () => {
 					<Logo />
 				</span>
 			</Link>
+			<div className="ml-auto">
+				<Profile />
+			</div>
+
 		</nav>
 	);
 };

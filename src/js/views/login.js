@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/login.scss";
+import { Link } from "react-router-dom";
 import { InputIconBox } from "../component/inputiconbox";
 
 export const Login = props => (
@@ -44,6 +45,23 @@ export const Login = props => (
 			</a>
 		</div>
 		<div className="mt-4">
+
+		<br />
+
+		<button className="LoginButton">Sign in!</button>
+		<br />
+		<br />
+		<Link to="/register">
+			<a href="#" className="linkRegister">
+				If you do not have an account, please register here
+			</a>
+		</Link>
+		<br />
+		<br />
+		<br />
+		<br />
+		<div>
+
 			<span className="font-weight-bold">Sign in with:</span>
 			<div>
 				<i className="GoogleLogo fab fa-google" />

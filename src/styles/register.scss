@@ -1,0 +1,60 @@
+.NewUserTitle{
+    background-color: #8db600;
+    color: white;
+    width: 30rem;
+    padding: 0.4rem;
+    margin: auto;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.EmailInput, .PasswordInput, .UsernameInput{
+    display: flex;
+    justify-content: center;
+}
+
+.nameLabel, .emailLabel{
+    margin-left: 19.3rem;
+}
+
+.usernameLabel, .passwordLabel{
+    margin-left: 19.9rem;
+}
+
+.InputE, .InputP, .InputU{
+    width: 27rem;
+    border: 1px solid #a5a7a7;
+    border-radius: 5px;
+}
+
+.RegisterButton{
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #1b2f33;
+    color: white;
+    width: 30rem;
+    padding: 0.5rem;
+}
+
+.TermsConditionsPrivacy{
+    color: #1b2f33;
+    background-color: white;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+#TermsConditionsPrivacy{
+    margin-right: 1rem;
+    background-color: #1b2f33;
+}
+
+.GoogleLogo, .InstagramLogo, .TwitterLogo, .LinkedinLogo, .FacebookLogo{
+    color: #ffffff;
+    background: #1b2f33;
+    padding: 0.5rem;
+    font-size: 2rem;
+    border-radius: 40px;
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem;
+    }
