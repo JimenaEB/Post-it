@@ -35,6 +35,7 @@ export const Login = props => (
 						name="Password"
 						placeholder="Enter your password"
 					/>
+
 				</div>
 			</div>
 		</form>

@@ -12,9 +12,10 @@ export const Register = () => {
 		let email = document.querySelector("#Email").value;
 		let password = document.querySelector("#Password").value;
 		let checkbox = document.querySelector("#TermsConditionsPrivacy").checked;
+		let name = document.querySelector("#Name").value;
 
-		if (username != "" && email != "" && password != "" && checkbox != false) {
-			actions.createUser();
+		if (username != "" && email != "" && password != "" && checkbox != false && name != "") {
+			actions.createUser(username, email, password, name);
 		}
 	};
 
@@ -26,6 +27,7 @@ export const Register = () => {
 				<div className="NameInput flex-container d-flex flex-column mt-3">
 					<div className="row">
 						<label className="col-1 mb-0 offset-3 nameLabel">Name:</label>
+
 					</div>
 					<div className="row d-flex justify-content-center">
 						<span>
@@ -44,6 +46,7 @@ export const Register = () => {
 				<div className="UsernameInput d-flex flex-column mt-2">
 					<div className="row">
 						<label className="col-1 mb-0 offset-3 usernameLabel">Username:</label>
+
 					</div>
 					<div className="row d-flex justify-content-center">
 						<span>
@@ -80,6 +83,7 @@ export const Register = () => {
 				<div className="PasswordInput flex-container d-flex flex-column mt-2">
 					<div className="row">
 						<label className="col-1 mb-0 offset-3 passwordLabel">Password:</label>
+
 					</div>
 					<div className="row d-flex justify-content-center">
 						<span>

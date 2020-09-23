@@ -8,9 +8,10 @@
     font-weight: bold;
 }
 
-.EmailInput, .PasswordInput, .UsernameInput{
+.EmailInput, .PasswordInput, .NameInput, .UsernameInput{
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .nameLabel, .emailLabel{
@@ -32,7 +33,7 @@
     border-radius: 5px;
     background-color: #1b2f33;
     color: white;
-    width: 30rem;
+    width: 40rem;
     padding: 0.5rem;
 }
 
