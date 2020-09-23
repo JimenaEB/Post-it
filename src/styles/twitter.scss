@@ -1,0 +1,50 @@
+.preview-twitter {
+    width: 30rem;
+    height: auto;
+    overflow: hidden;
+}
+
+.preview-twitter:hover {
+    overflow-y: scroll;
+}
+
+.preview-twitter .tweet{
+    font-size: 1.2rem;
+}
+
+.preview-twitter .twitter-post {
+    height: 15rem;
+    width: 30rem;
+}
+
+.calendar-twitter {
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    background-color:white;
+}
+
+.calendar-twitter:hover {
+    overflow-y: scroll;
+}
+
+.calendar-twitter .profile-twitter {
+    height: 2rem;
+    width: 2rem;
+}
+
+.calendar-twitter .username-twitter {
+    font-size: 0.7rem;
+}
+
+.calendar-twitter .imgContainer-twitter {
+    width: 1rem;
+}
+.calendar-twitter .tweet {
+    font-size: 0.7rem;
+}
+
+.calendar-twitter i {
+    font-size: 0.7rem;
+}
+

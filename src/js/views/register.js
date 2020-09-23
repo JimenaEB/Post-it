@@ -20,25 +20,33 @@ export const Register = () => {
 	};
 
 	return (
-		<div className="text-center mt-5">
+		<div className="text-center mt-0">
 			<h2 className="NewUserTitle">New User</h2>
-			<br />
+
 			<form className="container-form container">
-				<div className="NameInput flex-container  ">
+				<div className="NameInput flex-container d-flex flex-column mt-3">
 					<div className="row">
-						<label className="col-1 mb-0 offset-3">Name:</label>
+						<label className="col-1 mb-0 offset-3 nameLabel">Name:</label>
+
 					</div>
 					<div className="row d-flex justify-content-center">
 						<span>
 							<InputIconBox to="/inputiconbox" iconBox="fas fa-user-alt" />
 						</span>
-						<input className="InputP ml-1" type="text" id="Name" name="name" placeholder="Name" />
+						<input
+							className="InputP ml-1"
+							type="text"
+							id="Name"
+							name="name"
+							placeholder="Enter your name"
+						/>
 					</div>
 				</div>
-				<br />
-				<div className="UsernameInput flex-container">
+
+				<div className="UsernameInput d-flex flex-column mt-2">
 					<div className="row">
-						<label className="col-1 mb-0 offset-3">Username:</label>
+						<label className="col-1 mb-0 offset-3 usernameLabel">Username:</label>
+
 					</div>
 					<div className="row d-flex justify-content-center">
 						<span>
@@ -49,26 +57,33 @@ export const Register = () => {
 							type="text"
 							id="Username"
 							name="Username"
-							placeholder="Username"
+							placeholder="Enter your username"
 						/>
 					</div>
 				</div>
-				<br />
-				<div className="EmailInput flex-container ">
+
+				<div className="EmailInput flex-container d-flex flex-column mt-2">
 					<div className="row">
-						<label className="col-1 mb-0 offset-3">Email:</label>
+						<label className="col-1 mb-0 offset-3 emailLabel">Email:</label>
 					</div>
 					<div className="row d-flex justify-content-center">
 						<span>
-							<InputIconBox to="/inputiconbox" iconBox="far fa-envelope " />
+							<InputIconBox to="/inputiconbox" iconBox="far fa-envelope" />
 						</span>
-						<input className="InputE ml-1" type="text" id="Email" name="Email" placeholder="Email" />
+						<input
+							className="InputE ml-1"
+							type="text"
+							id="Email"
+							name="Email"
+							placeholder="Enter your email"
+						/>
 					</div>
 				</div>
-				<br />
-				<div className="PasswordInput flex-container ">
+
+				<div className="PasswordInput flex-container d-flex flex-column mt-2">
 					<div className="row">
-						<label className="col-1 mb-0 offset-3">Password:</label>
+						<label className="col-1 mb-0 offset-3 passwordLabel">Password:</label>
+
 					</div>
 					<div className="row d-flex justify-content-center">
 						<span>
@@ -79,12 +94,12 @@ export const Register = () => {
 							type="text"
 							id="Password"
 							name="Password"
-							placeholder="Password"
+							placeholder="Enter your password"
 						/>
 					</div>
 				</div>
-				<br />
-				<div className="TermsConditionsPrivacy">
+
+				<div className="TermsConditionsPrivacy mt-3">
 					<input
 						type="checkbox"
 						id="TermsConditionsPrivacy"
@@ -94,23 +109,19 @@ export const Register = () => {
 					<label> Accept the terms, conditions and Privacy Policy </label>
 				</div>
 			</form>
-			<button className="RegisterButton" onClick={() => handleRegister()}>
+			<button className="RegisterButton mt-2" onClick={() => handleRegister()}>
 				Register!
 			</button>
-			<br />
-			<br />
-			<br />
-			<br />
-			<div>
+
+			<div className="mt-4">
 				<span className="font-weight-bold">Register with:</span>
-				<br />
+
 				<div>
+					<i className="GoogleLogo fab fa-google" />
 					<i className="InstagramLogo fab fa-instagram" />
 					<i className="TwitterLogo fab fa-twitter" />
 					<i className="LinkedinLogo fab fa-linkedin-in" />
 					<i className="FacebookLogo fab fa-facebook-f" />
-					<br />
-					<br />
 				</div>
 			</div>
 		</div>
