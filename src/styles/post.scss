@@ -1,0 +1,55 @@
+.post-header {
+    background-color: #8DB600;
+    font-family: Helvetica, sans-serif
+}
+
+.select-social-post {
+   font-size: 3rem;
+}
+
+.InstagramLogo, .TwitterLogo, .LinkedinLogo, .FacebookLogo{
+    color: white;
+    background: #1b2f33;
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: 40px;
+    width: 4rem;
+    margin: 1rem;
+    }
+
+.label-post {
+    color: #8DB600;
+}
+
+.multimedia-post{
+    width: 20rem;
+    height: 20rem;
+    
+}
+
+.multimedia-container-post {
+    overflow: hidden;
+    width:30rem;
+    height: 25rem;
+}
+
+.multimedia-container-post:hover {
+    overflow-x: scroll;
+}
+
+.icon-post {
+    font-size: 3.7rem;
+}
+
+.icon-post:hover{
+    cursor: pointer;
+}
+
+.PostItButton{
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #1b2f33;
+    color: white;
+    width: 34.5rem;
+    padding: 0.5rem;
+}
