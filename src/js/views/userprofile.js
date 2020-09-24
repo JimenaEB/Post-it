@@ -3,7 +3,7 @@ import "../../styles/userprofile.scss";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
-export default function UserProfile() {
+export function UserProfile() {
 	const { store, actions } = useContext(Context);
 
 	const [profilePhoto, setProfilePhoto] = useState("");
@@ -107,8 +107,8 @@ export default function UserProfile() {
 								<option className="text-secondary" value="select">
 									Select...
 								</option>
-								<option value="instagram">Instagram</option>
 								<option value="twitter">Twitter</option>
+								<option value="instagram">Instagram</option>
 								<option value="facebook">Facebook</option>
 								<option value="linkedin">Linkedin</option>
 							</select>

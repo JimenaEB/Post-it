@@ -19,31 +19,31 @@ const getState = ({ getStore, getActions, setStore }) => {
 				console.log(store.logos);
 			},
 
-			addSocial: async (newUsername, newPassword, newEmail, newSocialName, newPhoto) => {
-				let social = {
+			addImg: url => {
+				setStore({ imgs: url });
+				const store = getStore();
+				console.log(store.imgs);
+			},
+
+			enterUser: async (newDate, newDescription) => {
+				let enter = {
 					username: newUsername,
 					password: newPassword,
 					email: newEmail,
-					social_name: newSocialName,
-					photo: newPhoto
+					name: newName
 				};
-				console.log(social);
+				console.log(enter);
 				let response = await fetch(
-					"https://3000-ba72c270-9a3a-457d-a531-5aa780bd058d.ws-eu01.gitpod.io/socials",
+					"https://3000-adb6bc1e-1ff5-4873-b2dc-9cda91ea97ac.ws-eu01.gitpod.io/users",
 					{
 						method: "POST",
 						headers: {
 							"Content-Type": "application/json"
 						},
-						body: JSON.stringify(social)
+						body: JSON.stringify(enter)
 					}
 				);
 				let result = await response.json();
-			},
-			addImg: url => {
-				setStore({ imgs: url });
-				const store = getStore();
-				console.log(store.imgs);
 			},
 
 			addSocial: async (newUsername, newPassword, newEmail, newSocialName, newPhoto) => {
@@ -56,7 +56,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 				console.log(social);
 				let response = await fetch(
-					"https://3000-ba72c270-9a3a-457d-a531-5aa780bd058d.ws-eu01.gitpod.io/socials",
+					"https://3000-adb6bc1e-1ff5-4873-b2dc-9cda91ea97ac.ws-eu01.gitpod.io/socials",
 					{
 						method: "POST",
 						headers: {
@@ -75,7 +75,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 				console.log(post);
 				let response = await fetch(
-					"https://3000-ba72c270-9a3a-457d-a531-5aa780bd058d.ws-eu01.gitpod.io/posts",
+					"https://3000-adb6bc1e-1ff5-4873-b2dc-9cda91ea97ac.ws-eu01.gitpod.io/posts",
 					{
 						method: "POST",
 						headers: {
@@ -87,14 +87,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				let result = await response.json();
 			},
 
-			registerMultimedia: async (newMultimediaType, newMultimediaUrl) => {
+			addMultimedia: async (newMultimediaType, newMultimediaUrl) => {
 				let multimedia = {
 					multimedia_type: newMultimediaType,
 					multimedia_url: newMultimediaUrl
 				};
 				console.log(multimedia);
 				let response = await fetch(
-					"https://3000-ba72c270-9a3a-457d-a531-5aa780bd058d.ws-eu01.gitpod.io/multimedias",
+					"https://3000-adb6bc1e-1ff5-4873-b2dc-9cda91ea97ac.ws-eu01.gitpod.io/multimedias",
 					{
 						method: "POST",
 						headers: {

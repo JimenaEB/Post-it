@@ -3,13 +3,22 @@ import "../../styles/login.scss";
 import { Link } from "react-router-dom";
 import { InputIconBox } from "../component/inputiconbox";
 
-export default function Login() {
+export function Login() {
+	const handleLogin = () => {
+		let email = document.querySelector("#Email").value;
+		let password = document.querySelector("#Password").value;
+
+		if (email != "" && password != "") {
+			actions.enterUser();
+		}
+	};
+
 	return (
 		<div className="text-center mt-5">
 			<h2 className="LoginTitle">Log-in</h2>
 
 			<form>
-				<div className="EmailInput flex-container d-flex flex-column mt-4">
+				<div className="EmailInput flex-container d-flex flex-column mt-5">
 					<div className="row d-flex justify-content-center">
 						<span>
 							<InputIconBox to="/inputiconbox" iconBox="far fa-envelope " />
@@ -40,21 +49,21 @@ export default function Login() {
 				</div>
 			</form>
 			<div className="d-flex flex-column mt-3">
-				<button className="LoginButton mt-4">Sign in!</button>
+				<Link to="/userprofile">
+					<button className="LoginButton mt-4">Sign in!</button>
+				</Link>
 				<a href="#" className="linkRegister mt-3">
 					If you do not have an account, please register here
 				</a>
 			</div>
-			<div className="mt-4">
+			<div className="mt-5">
+				<span className="font-weight-bold">Sign in with:</span>
 				<div>
-					<span className="font-weight-bold">Sign in with:</span>
-					<div>
-						<i className="GoogleLogo fab fa-google" />
-						<i className="InstagramLogo fab fa-instagram" />
-						<i className="TwitterLogo fab fa-twitter" />
-						<i className="LinkedinLogo fab fa-linkedin-in" />
-						<i className="FacebookLogo fab fa-facebook-f" />
-					</div>
+					<i className="TwitterLogo fab fa-twitter" />
+					<i className="InstagramLogo fab fa-instagram" />
+					<i className="GoogleLogo fab fa-google" />
+					<i className="LinkedinLogo fab fa-linkedin-in" />
+					<i className="FacebookLogo fab fa-facebook-f" />
 				</div>
 			</div>
 		</div>

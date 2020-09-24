@@ -5,6 +5,7 @@ import TextField from "@material-ui/core/TextField";
 import Twitter from "../component/twitter.js";
 import Instagram from "../component/instagram.js";
 import Facebook from "../component/facebook.js";
+import Linkedin from "../component/linkedin.js";
 import { Context } from "../store/appContext";
 
 const useStyles = makeStyles(theme => ({
@@ -62,7 +63,7 @@ export function Post() {
 	};
 
 	return (
-		<div className="container">
+		<div className="container mt-5">
 			<div className="row header post-header rounded-lg text-center mb-4">
 				<h2 className="text-white col">
 					<strong>New Post</strong>
@@ -237,6 +238,15 @@ export function Post() {
 							imgProfile="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 							imgPost={imgs}
 							description={text}
+							type="post"
+						/>
+					</div>
+					<div className={listSocial["linkedin"] == true ? "col container border-left" : "d-none"}>
+						<Linkedin
+							imgProfile="https://images.pexels.com/photos/3735532/pexels-photo-3735532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+							name="Luigi"
+							description={text}
+							imgPost={imgs}
 							type="post"
 						/>
 					</div>

@@ -5,6 +5,7 @@ import ScrollToTop from "./component/scrollToTop";
 import { Login } from "./views/login";
 import { Post } from "./views/post";
 import { UserProfile } from "./views/userprofile";
+import { Calendar } from "./views/calendar";
 import { Home } from "./views/home";
 import injectContext from "./store/appContext";
 
@@ -28,6 +29,15 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/post">
 							<Post />
+						</Route>
+						<Route exact path="/login">
+							<Login />
+						</Route>
+						<Route exact path="/userprofile">
+							<UserProfile />
+						</Route>
+						<Route exact path="/calendar">
+							<Calendar />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
